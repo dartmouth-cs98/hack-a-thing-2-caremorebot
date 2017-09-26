@@ -31,8 +31,6 @@ class MyStreamListener(tweepy.StreamListener):
         txt = 'I could care less'
         print(twt['text'])
 
-        print(str(twt['retweeted']) + " \n " + str(type(twt['retweeted'])))
-
         # if twt['text'].find(txt) >= 0 and twt['retweeted'] is False:
         if matched and twt['retweeted'] is False:
             if twt['text'].find('RT @') < 0:
