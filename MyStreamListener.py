@@ -16,7 +16,7 @@ class MyStreamListener(tweepy.StreamListener):
 
         twt = json.loads(data)
 
-        filename = "/Users/foster/Documents/Dartmouth/17F/CS98/twitterbot/carebar.gif"
+        filename = "/Users/foster/Documents/Dartmouth/17F/CS98/hack-a-thing-2-caremorebot/carebar.gif"
         #print(status.id)
 
         # old_id = status.id

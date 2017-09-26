@@ -17,10 +17,8 @@ myStream = tweepy.Stream(auth=api.auth, listener=myStreamListener)
 
 myStream.filter(track=["I could care less"])
 
-filename = "/Users/foster/Documents/Dartmouth/17F/CS98/twitterbot/carebar.gif"
-
-txt = 'I could care less'
-
+#filename = "/Users/foster/Documents/Dartmouth/17F/CS98/hack-a-thing-2-caremorebot/carebar.gif"
+#txt = 'I could care less'
 #for twt in myStream:
     #if twt.status.find(txt) > 0:
         #msg = 'Did you mean "I couldn\'t care less"?'
