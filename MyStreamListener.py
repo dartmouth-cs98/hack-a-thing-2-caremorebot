@@ -26,9 +26,16 @@ class MyStreamListener(tweepy.StreamListener):
         user = "@" + str(twt['user']['screen_name'])
         msg = 'Hey ' + user + ', did you mean "I couldn\'t care less"?'
 
+        # matches = ['I could care less', 'could care less', 'I really could care less']
+
         txt = 'I could care less'
         print(twt['text'])
 
-        if twt['text'].find(txt) >= 0 and twt['retweeted'] is not True:
-            print("tweeting now")
-            api.update_with_media(filename, status=msg, in_reply_to_status_id=int(twt['id']))
+        print(str(twt['retweeted']) + " \n " + str(type(twt['retweeted'])))
+
+        if twt['text'].find(txt) >= 0 and twt['retweeted'] is False:
+            if twt['text'].find('RT @') < 0:
+                print("tweeting now")
+                api.update_with_media(filename, status=msg, in_reply_to_status_id=int(twt['id']))
+            else:
+                print('caught RT')
